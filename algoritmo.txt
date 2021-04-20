@@ -1,0 +1,23 @@
+public static void sem(Integer[] array){
+
+	for(int i=0; i<array.length;i++){
+		
+		List<Integer> listGreaterInts = new ArrayList<Integer>();
+			
+		for(int j = i; j<array.length; j++){
+
+			if(array[j] > array[i]){
+				listGreaterInts.add(array[j]);
+			}
+		}
+
+		if(listGreaterInts.size() == 0){
+			System.out.println(array[i] + " --> -1");
+		}
+		else{
+			Collections.sort(listGreaterInts);
+			System.out.println(array[i] + " --> " + listGreaterInts.get(0));
+		}
+	}
+}
+		
